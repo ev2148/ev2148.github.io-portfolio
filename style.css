@@ -1,0 +1,397 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }   
+  
+section{
+    background-color: rgb(57, 40, 207);
+    
+}
+
+.heronav{
+    
+    height: 9vh;
+    font-size: 22px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: tomato;
+    font-weight: bold;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    width: 500px;
+    justify-content: space-around;
+ }
+
+
+li{
+    width: 200px;
+    text-decoration: none;
+}
+html{
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+
+}
+a{
+    text-decoration: none;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero{
+    background-image: url(/ombre2.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+}
+
+#hero::after{
+    position:absolute;
+    left:0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+
+}
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+#hero h1:nth-child(3){
+    animation-delay: 3s;
+}
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: blue;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .3s;
+}
+
+#hero h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+
+#hero .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid blue;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+#hero .cta:hover{
+    color: white;
+    background-color: blue;
+}
+
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+
+    }
+        
+}
+
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+
+.sub-section{
+    display: flex;
+    justify-content: space-around;
+    padding: 80px ;
+    color: white;
+}
+.sub-section-alternative{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px;
+    background-color: rgb(219, 78, 53);
+    color: white
+}
+
+h2{
+    font-size: 80px;
+}
+p{
+    font-size: 30px;
+}
+
+.subtext{
+    font-size: 15px;
+    font-weight: 300;
+    color: black;
+}
+
+.headshot{
+    width: 300px;
+    border-radius: 150px;
+    margin-left: 80px;
+
+}
+
+.headshot-container{
+    display: flex;
+    align-items: center;
+}
+.project-card{
+    width:300px;
+    height: 360px;
+    box-shadow: 5px 5px 20px rgb(18, 44, 158);
+    margin: 10px;
+    background-color: rgb(209, 207, 212);
+    color: white
+    
+}
+.project-card h3{
+
+    font-weight: bold;
+    font-size: 20px;
+   
+}
+.project-card p{
+    font-size: 15px;
+    padding: 10px;
+   
+}
+
+.project-card:hover{
+    transform: scale(1.1);
+}  
+
+.project-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media only screen and (max-width:1000px) {
+    .project-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .information{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.project-image{
+    margin-top: 25px;
+    width: 250px;
+    border-radius: 125px;
+}
+hr{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.project-link{
+    text-decoration: none;
+    color: #0a0202;
+}
+a{ 
+    text-decoration: none;
+    color: white;
+}
+.hamburger{
+    display: none;
+}
+.hamburger:focus{
+    outline: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hamburger{
+        display: block;
+        border: 0;
+        background-color: transparent;
+        color: white;
+        font-size: 30px;
+        margin: 20px;
+        align-self: flex-end;
+    }
+
+    ul{
+        display: none;
+        background-color: #2b2c38;
+        margin:0px;
+    }
+
+    ul.show{
+        display: block;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #2b2c38;
+    }
+    .logo{
+        display: none;
+    }
+}
+
+
+
+
+.maincontainer{
+    position: relative;
+    width: 250px;
+    height: 320px;
+    top: 50%;
+    left: 40%;
+    
+    
+   
+}
+
+.thecard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    
+}
+.thecard:hover{
+    transform: rotateY(180deg);
+}
+
+.thefront{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    backface-visibility: hidden;
+    background: #c44412;
+    color: white;
+    text-align: center;
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.headshotc{
+    width: 150px;
+    padding: 10px;
+    border-radius: 100px;
+
+}
+
+.headshotcontact{
+    display: block;
+    align-items: center;
+}
+
+.theback{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    backface-visibility: hidden;
+    background: #1eb5c0;
+    color: #333;
+    text-align: center;
+    margin: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    transform: rotateY(180deg);
+}
+
+.email-icon{
+    width: 150px;
+    padding: 10px;
+    border-radius: 100px;
+
+}
+
+.email{
+    display: block;
+    align-items: center;
+}
+
+
+.thefront h1{
+    padding: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.theback h1{
+    padding: 30px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+.theback p{
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: underline;
+
+
+}
+
+
+
+
+
